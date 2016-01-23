@@ -46,6 +46,7 @@
             this.Task1.Size = new System.Drawing.Size(533, 310);
             this.Task1.TabIndex = 0;
             this.Task1.Text = "+";
+            this.Task1.UseCompatibleTextRendering = true;
             this.Task1.UseVisualStyleBackColor = false;
             this.Task1.Resize += new System.EventHandler(this.Task1_Resize);
             // 

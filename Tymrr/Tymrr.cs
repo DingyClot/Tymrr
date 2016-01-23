@@ -14,11 +14,15 @@ namespace Tymrr
         private void Task1_Resize(object sender, EventArgs e)
         {
             var taskButton = (sender as Button);
-            var font = taskButton.Font;
 
-            var minimum = Math.Min(taskButton.Width, taskButton.Height);
+            var size = Math.Min(taskButton.Width, taskButton.Height);
 
-            taskButton.Font = new Font(font.FontFamily, minimum / 3);
+            taskButton.Font = new Font(
+                taskButton.Font.FontFamily,
+                size / 4);
+
+            //Well I guess we don't want incompatible text rendering...
+            taskButton.UseCompatibleTextRendering = true;
         }
     }
 }
