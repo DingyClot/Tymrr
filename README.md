@@ -1,2 +1,2 @@
 # Tymrr
-It's a timer.
+It's a task timer.
