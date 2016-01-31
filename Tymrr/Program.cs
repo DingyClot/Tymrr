@@ -13,7 +13,7 @@ namespace Tymrr
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Tymrr());
+            Application.Run(new MainForm());
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Tymrr
 {
-    partial class Tymrr
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,37 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Task1 = new System.Windows.Forms.Button();
+            this.uiGrid = new System.Windows.Forms.TableLayoutPanel();
             this.SuspendLayout();
             // 
-            // Task1
+            // uiGrid
             // 
-            this.Task1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.uiGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Task1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.Task1.FlatAppearance.BorderSize = 0;
-            this.Task1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Task1.Font = new System.Drawing.Font("Arial Black", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Task1.ForeColor = System.Drawing.Color.Black;
-            this.Task1.Location = new System.Drawing.Point(13, 13);
-            this.Task1.Name = "Task1";
-            this.Task1.Size = new System.Drawing.Size(533, 310);
-            this.Task1.TabIndex = 0;
-            this.Task1.Text = "+";
-            this.Task1.UseCompatibleTextRendering = true;
-            this.Task1.UseVisualStyleBackColor = false;
-            this.Task1.Resize += new System.EventHandler(this.Task1_Resize);
+            this.uiGrid.BackColor = System.Drawing.Color.Transparent;
+            this.uiGrid.ColumnCount = 1;
+            this.uiGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.uiGrid.Location = new System.Drawing.Point(12, 12);
+            this.uiGrid.Name = "uiGrid";
+            this.uiGrid.RowCount = 1;
+            this.uiGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.uiGrid.Size = new System.Drawing.Size(534, 311);
+            this.uiGrid.TabIndex = 0;
             // 
-            // Tymrr
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(558, 335);
-            this.Controls.Add(this.Task1);
+            this.Controls.Add(this.uiGrid);
             this.MinimumSize = new System.Drawing.Size(300, 300);
-            this.Name = "Tymrr";
+            this.Name = "MainForm";
             this.Text = "Tymrr";
             this.ResumeLayout(false);
 
@@ -66,6 +62,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Task1;
+        private System.Windows.Forms.TableLayoutPanel uiGrid;
     }
 }
