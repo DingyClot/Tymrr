@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tymrr
@@ -16,20 +10,27 @@ namespace Tymrr
         {
             InitializeComponent();
 
+            this.DoubleBuffered = true;
+            this.SetStyle(
+               ControlStyles.OptimizedDoubleBuffer |
+               ControlStyles.UserPaint |
+               ControlStyles.AllPaintingInWmPaint,
+               true);
+
+            Dock = DockStyle.Fill;
+
             //Well I guess we don't want incompatible text rendering...
             closeButton.UseCompatibleTextRendering = true;
         }
 
         private void Task_Resize(object sender, EventArgs e)
         {
-            //float size = Math.Min(this.Width, this.Height);
+            var size = Math.Min(this.Width, this.Height);
 
-            //size = size > 0 ? size : 1;
-
-            //taskName.Font = new Font(
-            //    taskName.Font.FontFamily,
-            //    size / 10,
-            //    taskName.Font.Style);
+            taskName.Font = new Font(
+                taskName.Font.FontFamily,
+                size / 3,
+                taskName.Font.Style);
         }
     }
 }

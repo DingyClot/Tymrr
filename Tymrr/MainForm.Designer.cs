@@ -28,40 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.uiGrid = new System.Windows.Forms.TableLayoutPanel();
+            this.taskBoard = new Tymrr.TaskBoard();
             this.SuspendLayout();
             // 
-            // uiGrid
+            // taskBoard
             // 
-            this.uiGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiGrid.BackColor = System.Drawing.Color.Transparent;
-            this.uiGrid.ColumnCount = 1;
-            this.uiGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.uiGrid.Location = new System.Drawing.Point(12, 12);
-            this.uiGrid.Name = "uiGrid";
-            this.uiGrid.RowCount = 1;
-            this.uiGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.uiGrid.Size = new System.Drawing.Size(534, 311);
-            this.uiGrid.TabIndex = 0;
+            this.taskBoard.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.taskBoard.Location = new System.Drawing.Point(0, 0);
+            this.taskBoard.Name = "taskBoard";
+            this.taskBoard.Size = new System.Drawing.Size(484, 262);
+            this.taskBoard.TabIndex = 1;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(558, 335);
-            this.Controls.Add(this.uiGrid);
-            this.MinimumSize = new System.Drawing.Size(300, 300);
+            this.ClientSize = new System.Drawing.Size(484, 262);
+            this.Controls.Add(this.taskBoard);
+            this.DoubleBuffered = true;
+            this.MinimumSize = new System.Drawing.Size(300, 200);
             this.Name = "MainForm";
             this.Text = "Tymrr";
+            this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TableLayoutPanel uiGrid;
+        private TaskBoard taskBoard;
     }
 }
