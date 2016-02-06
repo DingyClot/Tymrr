@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.taskBoard = new Tymrr.TaskBoard();
             this.SuspendLayout();
             // 
@@ -48,6 +49,7 @@
             this.ClientSize = new System.Drawing.Size(484, 262);
             this.Controls.Add(this.taskBoard);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(300, 200);
             this.Name = "MainForm";
             this.Text = "Tymrr";
