@@ -1,19 +1,22 @@
 ﻿using NUnit.Framework;
 using Should;
-using System.Collections.Immutable;
+using Tymrr.Boundary;
 
 namespace Tymrr.Specs
 {
     [TestFixture]
     class Start
     {
-        public FrontEnd ui = new FrontEnd();
-        public UserTasks user;
+        public Boundary.System app;
+        public Boundary.UserTasks user;
+
+        public FrontEndSpy ui = new FrontEndSpy();
 
         [SetUp]
         public void Initialise()
         {
-            user = new UserTasks(ui);
+            app = new CheckingApp(ui);
+            user = app.UserTasks;
         }
 
         [Test]
@@ -22,43 +25,9 @@ namespace Tymrr.Specs
             user.Start();
 
             ui.CurrentTasks.Count.ShouldEqual(12);
-            ui.CurrentTasks.ForEach(task => task.ShouldEqual(false));
+            ui.CurrentTasks.ForEach(task => task.Active.ShouldBeFalse());
         }
     }
 
-    internal class FrontEnd
-    {
-        public FrontEnd()
-        {
-            CurrentTasks = ImmutableList.Create<bool>();
-        }
-        public ImmutableList<bool> CurrentTasks { get; internal set; }
 
-        internal void UpdateTasks(ImmutableList<bool> tasks)
-        {
-            CurrentTasks = tasks;
-        }
-    }
-
-    internal class UserTasks
-    {
-        FrontEnd ui;
-
-        internal UserTasks(FrontEnd ui)
-        {
-            this.ui = ui;
-        }
-
-        internal void Start()
-        {
-            var tasks = ImmutableList.CreateBuilder<bool>();
-
-            for (int i = 0; i < 12; ++i)
-            {
-                tasks.Add(false);
-            }
-
-            ui.UpdateTasks(tasks.ToImmutable());
-        }
-    }
 }
