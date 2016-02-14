@@ -1,4 +1,4 @@
-﻿namespace Tymrr
+﻿namespace Tymrr.WinForms
 {
     partial class Task
     {

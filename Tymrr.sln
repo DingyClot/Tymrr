@@ -3,15 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tymrr", "Tymrr\Tymrr.csproj", "{878C95C2-4B65-4AE3-9AC0-897C499D232C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tymrr.WinForms", "Tymrr\Tymrr.WinForms.csproj", "{878C95C2-4B65-4AE3-9AC0-897C499D232C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tymrr.Specs", "Tymrr.Specs\Tymrr.Specs.csproj", "{F46AFA5A-BE40-4FDC-86BE-D3659E0ED1EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boundary", "Boundary\Boundary.csproj", "{691495CA-11B5-4286-B3EB-2F9E836D7C89}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tymrr.Boundary", "Boundary\Tymrr.Boundary.csproj", "{691495CA-11B5-4286-B3EB-2F9E836D7C89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserTasks", "UserTasks\UserTasks.csproj", "{1DB56D39-997A-4CE7-9CB7-00C2D1CB2D51}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tymrr.Activities", "UserTasks\Tymrr.Activities.csproj", "{1DB56D39-997A-4CE7-9CB7-00C2D1CB2D51}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tymrr.App", "Tymrr.App\Tymrr.App.csproj", "{31CF9B91-8CE5-41EC-93E6-5F83B8CA9A92}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{2C1ECA32-7390-4166-9835-ECE8ABBE37F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{3C43179E-0642-4E18-8375-4AABEEF2483C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{712899F1-4EB5-4533-8774-F2E37E7163BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,5 +48,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{878C95C2-4B65-4AE3-9AC0-897C499D232C} = {2C1ECA32-7390-4166-9835-ECE8ABBE37F1}
 	EndGlobalSection
 EndGlobal

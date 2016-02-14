@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Tymrr
+namespace Tymrr.WinForms
 {
     public partial class MainForm : Form
     {

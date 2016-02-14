@@ -1,4 +1,4 @@
-﻿namespace Tymrr
+﻿namespace Tymrr.WinForms
 {
     partial class MainForm
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.taskBoard = new Tymrr.TaskBoard();
+            this.taskBoard = new Tymrr.WinForms.TaskBoard();
             this.SuspendLayout();
             // 
             // taskBoard

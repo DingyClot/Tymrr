@@ -1,4 +1,4 @@
-﻿namespace Tymrr
+﻿namespace Tymrr.WinForms
 {
     partial class TaskBoard
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.grid = new System.Windows.Forms.TableLayoutPanel();
-            this.task1 = new Tymrr.Task();
+            this.task1 = new Tymrr.WinForms.Task();
             this.grid.SuspendLayout();
             this.SuspendLayout();
             // 

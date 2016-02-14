@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Collections.Immutable;
-using Tymrr.Boundary;
+﻿using System.Collections.Immutable;
+using Tymrr.Boundary.Data;
+using Tymrr.Boundary.Protocols;
 
-namespace Tymrr.Specs
+namespace Tymrr.Specs.Doubles
 {
     internal class FrontEndSpy : FrontEnd
     {

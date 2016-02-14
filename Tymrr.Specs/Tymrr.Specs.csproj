@@ -52,10 +52,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CheckingApp.cs" />
-    <Compile Include="FrontEndSpy.cs" />
+    <Compile Include="AppUnderTest.cs" />
+    <Compile Include="Doubles\FrontEndSpy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Specs.cs" />
+    <Compile Include="ManageApplication\Start.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -64,13 +64,13 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Boundary\Boundary.csproj">
+    <ProjectReference Include="..\Boundary\Tymrr.Boundary.csproj">
       <Project>{691495ca-11b5-4286-b3eb-2f9e836d7c89}</Project>
-      <Name>Boundary</Name>
+      <Name>Tymrr.Boundary</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UserTasks\UserTasks.csproj">
+    <ProjectReference Include="..\UserTasks\Tymrr.Activities.csproj">
       <Project>{1db56d39-997a-4ce7-9cb7-00c2d1cb2d51}</Project>
-      <Name>UserTasks</Name>
+      <Name>Tymrr.Activities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

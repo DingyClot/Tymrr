@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Tymrr.Boundary
+﻿namespace Tymrr.Boundary.Protocols
 {
     public interface UserTasks
     {
-        void Start();
+        StartAction Start { get; }
     }
 }

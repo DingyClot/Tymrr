@@ -1,14 +1,15 @@
-﻿using Tymrr.Boundary;
+﻿using Tymrr.Activities;
+using Tymrr.Boundary.Protocols;
 
 namespace Tymrr
 {
-    public class App : Boundary.System
+    public class App : TymrrSystem
     {
         public App(FrontEnd ui)
         {
-            UserTasks = new Tymrr.UserTasks.UserTasks(ui);
+            UserTasks = new UserTaskCollection(ui);
         }
 
-        public Boundary.UserTasks UserTasks { get ; }
+        public UserTasks UserTasks { get ; }
     }
 }

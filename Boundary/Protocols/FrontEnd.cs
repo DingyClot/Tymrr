@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Immutable;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Immutable;
+using Tymrr.Boundary.Data;
 
-namespace Tymrr.Boundary
+namespace Tymrr.Boundary.Protocols
 {
     public interface FrontEnd
     {
