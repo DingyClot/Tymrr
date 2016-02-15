@@ -41,13 +41,17 @@
     <Compile Include="UserTaskCollection.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Boundary\Tymrr.Boundary.csproj">
+    <ProjectReference Include="..\Tymrr.Boundary\Tymrr.Boundary.csproj">
       <Project>{691495ca-11b5-4286-b3eb-2f9e836d7c89}</Project>
       <Name>Tymrr.Boundary</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="EditCurrentTask\" />
+    <Folder Include="ManageBoard\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

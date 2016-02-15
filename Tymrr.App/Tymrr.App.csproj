@@ -34,11 +34,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Boundary\Tymrr.Boundary.csproj">
+    <ProjectReference Include="..\Tymrr.Boundary\Tymrr.Boundary.csproj">
       <Project>{691495ca-11b5-4286-b3eb-2f9e836d7c89}</Project>
       <Name>Tymrr.Boundary</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UserTasks\Tymrr.Activities.csproj">
+    <ProjectReference Include="..\Tymrr.Activities\Tymrr.Activities.csproj">
       <Project>{1db56d39-997a-4ce7-9cb7-00c2d1cb2d51}</Project>
       <Name>Tymrr.Activities</Name>
     </ProjectReference>
