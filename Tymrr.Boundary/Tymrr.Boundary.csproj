@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Protocols\CreateAction.cs" />
     <Compile Include="Protocols\Doable.cs" />
     <Compile Include="Protocols\FrontEnd.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

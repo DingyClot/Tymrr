@@ -19,5 +19,12 @@ namespace Tymrr.Activities
                 return new Start(ui);
             }
         }
+        public CreateAction Create
+        {
+            get
+            {
+                return new Create(ui);
+            }
+        }
     }
 }
