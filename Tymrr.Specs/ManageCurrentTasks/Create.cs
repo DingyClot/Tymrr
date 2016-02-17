@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using Should;
+using Tymrr.Boundary.Data;
 using Tymrr.Boundary.Protocols;
 using Tymrr.Specs.Doubles;
 
@@ -26,8 +27,16 @@ namespace Tymrr.Specs.ManageApplication
             var taskID = 0;
             user.Create.Begin(taskID);
 
-            ui.CurrentTasks.Count.ShouldEqual(12);
             ui.CurrentTasks[taskID].Active.ShouldBeTrue();
+        }
+
+        [Test]
+        public void Starts_the_timer_for_the_task()
+        {
+            var taskID = 0;
+            user.Create.Begin(taskID);
+
+            ui.RunningTask.TimeStamp.ShouldEqual(Time.Zero);
         }
     }
 }

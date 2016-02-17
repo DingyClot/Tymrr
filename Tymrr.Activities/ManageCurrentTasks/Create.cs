@@ -26,6 +26,8 @@ namespace Tymrr.Activities.ManageApplication
             }
 
             ui.UpdateTasks(tasks.ToImmutable());
+
+            ui.UpdateRunningTask(taskID, Time.Zero);
         }
     }
 }

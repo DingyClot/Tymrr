@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\RunningTask.cs" />
+    <Compile Include="Data\Time.cs" />
     <Compile Include="Protocols\CreateAction.cs" />
     <Compile Include="Protocols\Doable.cs" />
     <Compile Include="Protocols\FrontEnd.cs" />
