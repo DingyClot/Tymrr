@@ -8,5 +8,7 @@ namespace Tymrr.Boundary.Protocols
         void UpdateTasks(ImmutableList<Task> tasks);
 
         void UpdateRunningTask(int taskID, Time zero);
+
+        void RequestTaskName();
     }
 }

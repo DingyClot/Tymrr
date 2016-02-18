@@ -38,5 +38,14 @@ namespace Tymrr.Specs.ManageApplication
 
             ui.RunningTask.TimeStamp.ShouldEqual(Time.Zero);
         }
+        [Test]
+
+        public void Requests_a_task_name_from_the_ui()
+        {
+            var taskID = 0;
+            user.Create.Begin(taskID);
+
+            ui.Received_RequestTaskName.ShouldBeTrue();
+        }
     }
 }

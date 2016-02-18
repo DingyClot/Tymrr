@@ -1,4 +1,5 @@
-﻿using System.Collections.Immutable;
+﻿using System;
+using System.Collections.Immutable;
 using Tymrr.Boundary.Data;
 using Tymrr.Boundary.Protocols;
 
@@ -21,9 +22,15 @@ namespace Tymrr.Specs.Doubles
             RunningTask = new RunningTask(timeStamp);
         }
 
+        public void RequestTaskName()
+        {
+            Received_RequestTaskName = true;
+        }
+
         public ImmutableList<Task> CurrentTasks { get; internal set; }
 
         public RunningTask RunningTask { get; internal set; }
 
+        public bool Received_RequestTaskName { get; internal set; }
     }
 }
