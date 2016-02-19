@@ -4,7 +4,7 @@ using Tymrr.Boundary.Data;
 using Tymrr.Boundary.Protocols;
 using Tymrr.Specs.Doubles;
 
-namespace Tymrr.Specs.ManageApplication
+namespace Tymrr.Specs.ManageCurrentTasks
 {
     [TestFixture]
     class Create

@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Immutable;
 using System.Drawing;
 using System.Windows.Forms;
+using Tymrr.Boundary.Data;
+using Tymrr.Boundary.Protocols;
 
 namespace Tymrr.WinForms
 {
-    public partial class MainForm : Form
+    public partial class MainForm : Form, FrontEnd
     {
         public MainForm()
         {
@@ -20,6 +23,25 @@ namespace Tymrr.WinForms
                true);
 
             ClientSize = new Size(500, 300);
+
+            var app = new App(this);
+
+            app.UserTasks.Start.Do();
+        }
+
+        public void RequestTaskName()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateRunningTask(int taskID, Time zero)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateTasks(ImmutableList<Boundary.Data.Task> tasks)
+        {
+            taskBoard.UpdateTasks(tasks);
         }
 
         private void MainForm_Resize(object sender, EventArgs e)

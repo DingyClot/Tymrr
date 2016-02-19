@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -11,9 +12,11 @@ namespace Tymrr.WinForms
         public TaskBoard()
         {
             InitializeComponent();
+        }
 
-            //This was just for something to see in the Designer
-            grid.Controls.Remove(task1);
+        internal void UpdateTasks(ImmutableList<Boundary.Data.Task> tasks)
+        {
+            grid.Controls.Clear();
 
             var offset = 0;
             var index = 0;
@@ -25,7 +28,7 @@ namespace Tymrr.WinForms
                     var task = new Task();
                     task.Dock = DockStyle.Fill;
 
-                    tasks.Add(task);
+                    this.tasks.Add(task);
                     grid.Controls.Add(task, (c * 2) + offset, r);
                     grid.SetColumnSpan(task, 2);
 
@@ -37,17 +40,6 @@ namespace Tymrr.WinForms
                 }
                 offset += 1;
             }
-
-            tasks[0].Start();
-            tasks[4].Start();
-            tasks[8].Start();
-
-            tasks[1].Stop();
-            tasks[2].Stop();
-            tasks[5].Stop();
-            tasks[7].Stop();
-            tasks[10].Stop();
-            tasks[11].Stop();
         }
     }
 }

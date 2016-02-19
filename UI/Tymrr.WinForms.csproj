@@ -113,6 +113,16 @@
   <ItemGroup>
     <Content Include="Tymrr.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tymrr.App\Tymrr.App.csproj">
+      <Project>{31cf9b91-8ce5-41ec-93e6-5f83b8ca9a92}</Project>
+      <Name>Tymrr.App</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tymrr.Boundary\Tymrr.Boundary.csproj">
+      <Project>{691495ca-11b5-4286-b3eb-2f9e836d7c89}</Project>
+      <Name>Tymrr.Boundary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
