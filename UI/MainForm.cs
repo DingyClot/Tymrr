@@ -9,6 +9,8 @@ namespace Tymrr.WinForms
 {
     public partial class MainForm : Form, FrontEnd
     {
+        private App app;
+
         public MainForm()
         {
             InitializeComponent();
@@ -24,19 +26,19 @@ namespace Tymrr.WinForms
 
             ClientSize = new Size(500, 300);
 
-            var app = new App(this);
+            app = new App(this);
 
             app.UserTasks.Start.Do();
         }
 
         public void RequestTaskName()
         {
-            throw new NotImplementedException();
+//            throw new NotImplementedException();
         }
 
         public void UpdateRunningTask(int taskID, Time zero)
         {
-            throw new NotImplementedException();
+//            throw new NotImplementedException();
         }
 
         public void UpdateTasks(ImmutableList<Boundary.Data.Task> tasks)
@@ -68,6 +70,11 @@ namespace Tymrr.WinForms
                     this.ClientSize.Width / 2 - taskBoard.Width / 2,
                     0);
             }
+        }
+
+        private void taskBoard_Click(object sender, EventArgs e)
+        {
+            app.UserTasks.Create.Begin((e as TaskEventArgs).Index);
         }
     }
 }

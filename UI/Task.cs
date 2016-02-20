@@ -7,30 +7,18 @@ namespace Tymrr.WinForms
 {
     public partial class Task : UserControl
     {
+        static readonly private float inactiveTextSize = 10;
+
         private int index;
-        private float textSize = 10;
+        private float textSize = inactiveTextSize;
 
         private List<Color> activeColors = new List<Color>();
         private List<Color> inactiveColors = new List<Color>();
-        private List<string> taskNames = new List<string>();
         private List<string> taskTimes = new List<string>();
 
         public Task()
         {
             InitializeComponent();
-
-            taskNames.Add("Story Work");
-            taskNames.Add("Breaks");
-            taskNames.Add("Iteration Meetings");
-            taskNames.Add("Inbox");
-            taskNames.Add("Time Recording");
-            taskNames.Add("Story Work");
-            taskNames.Add("Breaks");
-            taskNames.Add("Iteration Meetings");
-            taskNames.Add("Inbox");
-            taskNames.Add("Time Recording");
-            taskNames.Add("Story Work");
-            taskNames.Add("Breaks");
 
             taskTimes.Add("00:12:56");
             taskTimes.Add("01:45:25");
@@ -104,25 +92,32 @@ namespace Tymrr.WinForms
 
         public void Start()
         {
-            taskName.Text = taskNames[index];
+            taskName.Text = "New Task";
             BackColor = activeColors[index];
             taskTime.Visible = true;
             taskTime.Text = taskTimes[index];
             textSize = 4;
 
+            var size = (float)Math.Min(this.Width, this.Height);
+
             taskName.Font = new Font(
-                new FontFamily("Segoe UI"),
-                taskName.Font.Size,
+                taskName.Font.FontFamily,
+                textSize * (size / 30),
                 taskName.Font.Style);
+
+            taskTime.Font = new Font(
+                taskTime.Font.FontFamily,
+                textSize * (size / 60),
+                taskTime.Font.Style);
+
+            closeButton.Font = new Font(
+                closeButton.Font.FontFamily,
+                textSize * (size / 35),
+                closeButton.Font.Style);
         }
 
         public void Stop()
         {
-            taskName.Text = taskNames[index];
-            BackColor = inactiveColors[index];
-            taskTime.Visible = true;
-            taskTime.Text = taskTimes[index];
-            textSize = 4;
         }
 
         private void Task_Resize(object sender, EventArgs e)
@@ -143,6 +138,11 @@ namespace Tymrr.WinForms
                 closeButton.Font.FontFamily,
                 textSize * (size / 35),
                 closeButton.Font.Style);
+        }
+
+        private void taskName_Click(object sender, EventArgs e)
+        {
+            OnClick(e);
         }
     }
 }

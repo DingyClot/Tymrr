@@ -63,6 +63,7 @@
             this.task1.BackColor = System.Drawing.Color.Silver;
             this.grid.SetColumnSpan(this.task1, 2);
             this.task1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.task1.Index = 0;
             this.task1.Location = new System.Drawing.Point(0, 0);
             this.task1.Margin = new System.Windows.Forms.Padding(0);
             this.task1.Name = "task1";

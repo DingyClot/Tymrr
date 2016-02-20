@@ -5,6 +5,17 @@ using System.Windows.Forms;
 
 namespace Tymrr.WinForms
 {
+    public class TaskEventArgs : System.EventArgs
+    {
+        public readonly int Index;
+
+        public TaskEventArgs(int index)
+        {
+            Index = index;
+        }
+
+    }
+
     public partial class TaskBoard : UserControl
     {
         private List<Task> tasks = new List<Task>();
@@ -12,10 +23,7 @@ namespace Tymrr.WinForms
         public TaskBoard()
         {
             InitializeComponent();
-        }
 
-        internal void UpdateTasks(ImmutableList<Boundary.Data.Task> tasks)
-        {
             grid.Controls.Clear();
 
             var offset = 0;
@@ -37,9 +45,25 @@ namespace Tymrr.WinForms
                         Color.FromArgb(25, 25, 25);
 
                     task.Index = index++;
+
+                    task.Click += Task_Click;
                 }
                 offset += 1;
             }
+        }
+
+        internal void UpdateTasks(ImmutableList<Boundary.Data.Task> tasks)
+        {
+            foreach (var task in this.tasks)
+            {
+                if (tasks[task.Index].Active)
+                    task.Start();
+            }
+        }
+
+        private void Task_Click(object sender, System.EventArgs e)
+        {
+            OnClick(new TaskEventArgs((sender as Task).Index));
         }
     }
 }

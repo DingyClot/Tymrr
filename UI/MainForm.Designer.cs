@@ -39,6 +39,7 @@
             this.taskBoard.Name = "taskBoard";
             this.taskBoard.Size = new System.Drawing.Size(484, 262);
             this.taskBoard.TabIndex = 1;
+            this.taskBoard.Click += new System.EventHandler(this.taskBoard_Click);
             // 
             // MainForm
             // 
